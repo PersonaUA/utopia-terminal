@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.24)
 
-project(Utopia VERSION 0.1 LANGUAGES CXX)
+project(utopia-terminal VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -38,9 +38,6 @@ set(PROJECT_SOURCES
 
 
 
-
-
-
 #target_include_directories(encryption PUBLIC "C:/Qt6/Tools/OpenSSL/Win_x64/include")
 #target_link_directories(encryption PUBLIC "C:/Qt6/Tools/OpenSSL/Win_x64/lib" "C:/Qt6/Tools/OpenSSL/Win_x64/bin")
 
@@ -52,18 +49,18 @@ set(PROJECT_SOURCES
 #    QML_FILES main.qml
 #)
 
-add_executable(appUtopia
+add_executable(utopia-terminal
     ${PROJECT_SOURCES}
 
 )
 
-set_target_properties(appUtopia PROPERTIES
+set_target_properties(utopia-terminal PROPERTIES
 
     WIN32_EXECUTABLE TRUE
 )
 
 target_link_libraries(
-    appUtopia
+    utopia-terminal
     PRIVATE
     Qt6::Core
     Qt6::Quick
@@ -77,6 +74,6 @@ target_link_libraries(
 
 
 
-install(TARGETS appUtopia
+install(TARGETS utopia-terminal
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
