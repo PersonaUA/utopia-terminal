@@ -22,7 +22,7 @@ RowLayout {
         amount: crp.buy_amount
 
 
-        button_text: qsTr("Купить BTC")
+        button_text: qsTr("Buy BTC")
 
         balance: crp.buy_balance //+ " USDT"
         reserve: crp.buy_balance_reserve
@@ -49,7 +49,7 @@ RowLayout {
 
 
 
-        button_text: qsTr("Продать BTC")
+        button_text: qsTr("Sell BTC")
 
         balance: crp.sell_balance //" BTC"
         reserve: crp.sell_balance_reserve
