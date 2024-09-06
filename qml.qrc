@@ -41,5 +41,6 @@
         <file>qml/order/Orders.qml</file>
         <file>qml/order/OrderLine.qml</file>
         <file>qml/header/AmountSlider.qml</file>
+        <file>qml/header/SignInItem.qml</file>
     </qresource>
 </RCC>

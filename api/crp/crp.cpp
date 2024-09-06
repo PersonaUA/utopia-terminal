@@ -47,7 +47,7 @@ Crp::Crp(QObject *parent) : QObject(parent)
     //const QString auth_token = "9e0852dc-c1f0-4f54-9d89-c50aa15ae413";
     //net->setCookie("auth_token", auth_token);
 
-    login();
+   // login();
 }
 //-----------------------------------------------------------------------------
 qreal Crp::spread()
