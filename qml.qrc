@@ -1,0 +1,45 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>mdi/Icon.js</file>
+        <file>mdi/materialdesignicons-webfont.ttf</file>
+        <file>qml/CustomRoundButton.qml</file>
+        <file>img/btc_32.png</file>
+        <file>img/usdt_32.png</file>
+        <file>qml/TradeHistoryLine.qml</file>
+        <file>qml/TradeHistoryList.qml</file>
+        <file>img/delete.svg</file>
+        <file>img/arrow_24.png</file>
+        <file>img/arrow_32.png</file>
+        <file>qml/IconButton.qml</file>
+        <file>qml/order/OrderData.qml</file>
+        <file>qml/order/_OrderLine.qml</file>
+        <file>qml/order/OrderList.qml</file>
+        <file>qml/order/OrderPartRow.qml</file>
+        <file>qml/order/OrderOptionsColumn.qml</file>
+        <file>qml/order/IconButton.qml</file>
+        <file>img/arrow_24_down.png</file>
+        <file>qml/book/BookData.qml</file>
+        <file>qml/book/BookHeaderLine.qml</file>
+        <file>qml/book/BookLine.qml</file>
+        <file>qml/book/BookList.qml</file>
+        <file>qml/book/HeaderLine.qml</file>
+        <file>qml/book/HeaderLabel.qml</file>
+        <file>qml/header/BotContainer.qml</file>
+        <file>qml/header/BuySellButtonLine.qml</file>
+        <file>qml/header/HeaderOrdersRow.qml</file>
+        <file>qml/header/HeaderTradeRow.qml</file>
+        <file>qml/header/MainHeader.qml</file>
+        <file>qml/header/MainMenu.qml</file>
+        <file>qml/header/MainToolBarRow.qml</file>
+        <file>qml/header/InputLine.qml</file>
+        <file>qml/header/CustomTextInput.qml</file>
+        <file>qml/header/TradeContainer.qml</file>
+        <file>qml/order/OrderSaleList.qml</file>
+        <file>qml/order/OrderBuyList.qml</file>
+        <file>qml/order/Orders.qml</file>
+        <file>qml/order/OrderLine.qml</file>
+        <file>qml/header/AmountSlider.qml</file>
+    </qresource>
+</RCC>
