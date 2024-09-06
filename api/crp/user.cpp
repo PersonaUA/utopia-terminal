@@ -42,13 +42,8 @@ void User::parse_balance(QJsonObject result)
 
         auto currency = new crp::Currency;
 
-       // currency->parse(json_currency);
-
-
-
-
+        // currency->parse(json_currency);
         //qDebug() << name << " " << balance;
-
         //orders::order order(jsonValue.toObject());
         //this->m_orders << order;
         //this->m_map_orders << order.map();

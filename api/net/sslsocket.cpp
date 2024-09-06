@@ -39,17 +39,12 @@ void SslSocket::onConnected()
     qDebug() << "WebSocket connected";
     connect(&m_webSocket, &QWebSocket::textMessageReceived, this, &SslSocket::onTextMessageReceived);
 
-
-
     m_timer = new QTimer(this);
     connect(m_timer, &QTimer::timeout, this, QOverload<>::of(&SslSocket::ping_server));
 
     qDebug() << QTime::currentTime();
 
     m_timer->start(25000);
-
-    //QString auth_token = "9e0852dc-c1f0-4f54-9d89-c50aa15ae413";
-
 
     QString user_join = "42[\"user-join\",\"" + m_auth_token + "\"]";
     QString trade_leave = "42[\"trade-leave\",\"btc_usdt\"]";

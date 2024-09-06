@@ -6,16 +6,7 @@ Balance::Balance(QObject *parent) : QObject(parent)
 {
     m_currencies = new QQmlObjectListModel<crp::Currency>(parent, "currencies", "currency_id");
     m_balances = new QQmlObjectListModel<dom::Balance>(parent, "balances", "name");
-
-
-
 }
-
-//Balance::Balance()
-//{
-
-//}
-
 
 void Balance::parse(const QJsonObject &json)
 {
@@ -47,14 +38,12 @@ void Balance::parse(const QJsonObject &json)
 
         get_balances()->append(dom_balance);
 
-
         qDebug() << dom_balance->get_name() << " " << dom_balance->get_balance();
 
         //orders::order order(jsonValue.toObject());
         //this->m_orders << order;
         //this->m_map_orders << order.map();
     }
-
 }
 
 }

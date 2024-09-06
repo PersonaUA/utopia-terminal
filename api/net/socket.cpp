@@ -2,8 +2,6 @@
 
 //wss://crp.is:8181/socket.io/?EIO=3&transport=websocket
 
-
-
 //-----------------------------------------------------------------------------
 Socket::Socket(const QUrl &url, QString auth_token, QObject *parent) : QObject(parent), m_url(url), m_auth_token(auth_token)
 {
@@ -44,8 +42,6 @@ Socket::Socket(const QUrl &url, QString auth_token, QObject *parent) : QObject(p
 
     m_webSocket->open(QUrl(url));
 
-
-
     //m_webSocket->open(QUrl("wss://crp.is:8181/socket.io/?EIO=3&transport=websocket"));
 }
 //-----------------------------------------------------------------------------
@@ -68,9 +64,6 @@ void Socket::onStateChanged(QAbstractSocket::SocketState socketState)
 {
     qDebug() << "StateChanged : " << socketState;
 }
-
-
-
 //-----------------------------------------------------------------------------
 void Socket::onConnected()
 {

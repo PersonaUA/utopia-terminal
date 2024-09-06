@@ -23,9 +23,6 @@ void History::parse(const QJsonObject &json)
 
         this->m_historyTradeItems << item;
     }
-
-
 }
-
 
 }

@@ -41,23 +41,6 @@ void Net::setCookie(QString cname, QString cvalue)
     //manager->setCookieJar(mCookieJar);
 }
 
-
-//-----------------------------------------------------------------------------
-//void Net::getData(QString str_url) {
-
-//    QUrl url(str_url);
-//    QString api_key = "5fdfe63caaf8631e080a22904233909b587b953e"; // old key "78287a23743a10222608a025a0bf64dc9ed2bd17";
-
-//    QNetworkRequest request(url);
-//    QString key = "Bearer " + api_key;
-
-//    request.setRawHeader("Authorization", key.toUtf8());
-
-//    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
-
-//    manager->get(request);
-//}
-
 //-----------------------------------------------------------------------------
 void Net::postDataXml(QString str_url, QString post_data)
 {
@@ -82,17 +65,8 @@ void Net::postDataForm(QString str_url, QUrlQuery postData)
 {
     QUrl url(str_url);
 
-//    QUrlQuery postData; //, QUrlQuery post_data
-
-//    postData.addQueryItem("PublicKey", PK);
-//    postData.addQueryItem("password", PASS);
-
-
-
     QNetworkRequest request(url);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
-
-
 
     manager->post(request, postData.toString(QUrl::FullyEncoded).toUtf8());
 }

@@ -26,11 +26,7 @@ void HistoryTrade::parse(const QJsonObject &json)
     m_amount = json["amount"].toDouble();
     m_value = json["value"].toDouble();
 
-    auto dt = json["created_at"].toInteger();
-
-    //auto eee = QDateTime::fromMSecsSinceEpoch(json["created_at"].toInteger()).toLocalTime().time();
-    //auto ttt = QDateTime::fromMSecsSinceEpoch(1715095395329);
-    //qDebug() << eee << ttt; //.toLocalTime().time();
+    auto dt = json["created_at"].toInteger();    
 
     m_created_at = QDateTime::fromMSecsSinceEpoch(json["created_at"].toInteger()).toLocalTime().time().toString("hh:mm:ss");
 

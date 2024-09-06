@@ -22,9 +22,9 @@ Crp::Crp(QObject *parent) : QObject(parent)
     connect(net, &Net::onReady, this, &Crp::readyRead);
 
     set_buy_price(62000);
-    set_sell_price(64000);
-    set_sell_amount(2);
-    set_buy_amount(1);
+    set_sell_price(62300);
+    set_sell_amount(0.001);
+    set_buy_amount(0.001);
 
 
     m_sell_book = new QQmlObjectListModel<dom::Book>(parent, "sell_book", "price");          // price - key
@@ -34,17 +34,10 @@ Crp::Crp(QObject *parent) : QObject(parent)
 
     m_ssl_socket = new SslSocket(parent, QUrl(QStringLiteral("wss://crp.is:8181/socket.io/?EIO=3&transport=websocket")));
 
-
-
     m_sell_orders = new QQmlObjectListModel<dom::Order>(parent, "sell_orders", "order_id");
     m_buy_orders = new QQmlObjectListModel<dom::Order>(parent, "buy_orders", "order_id");
 
     m_history_trade_items = new QQmlObjectListModel<dom::TradeItem>(parent, "history_trade_items", "record_id");
-
-
-    //connect(m_ssl_socket, &SslSocket::onMessage, this, &Crp::onSocketMessage);
-    //const QString auth_token = "9e0852dc-c1f0-4f54-9d89-c50aa15ae413";
-    //net->setCookie("auth_token", auth_token);
 
    // login();
 }
@@ -177,8 +170,6 @@ void Crp::ws_orders_parse(const QJsonObject &json)
                 }
             }
         }
-
-
     }
 }
 //-----------------------------------------------------------------------------
@@ -257,9 +248,6 @@ void Crp::remove_book_item(qreal price, QString type)
 
     qDebug() << "NOT FOUND " << type << price;
 
-  //  std::remove_if(book.begin(), book.end(),
-  //      [price](const dom::Book* b) -> bool { return b->get_price() == price; });
-
 }
 //-----------------------------------------------------------------------------
 void Crp::append_book(dom::Book* item, QString type)
@@ -303,7 +291,7 @@ void Crp::append_book(dom::Book* item, QString type)
     } else {
 
         book->append(item);
-        qDebug() << "APPEND BOOK" << item->get_price();
+        //qDebug() << "APPEND BOOK" << item->get_price();
     }
 
 
@@ -448,7 +436,6 @@ void Crp::open_socket(QString auth_token) {
 
 
    // SslSocket client(QUrl(QStringLiteral("wss://crp.is:8181/socket.io/?EIO=3&transport=websocket")));
-
    // SslSocket ssl_socket(QUrl(QStringLiteral("wss://crp.is:8181/socket.io/?EIO=3&transport=websocket")));
 }
 //-----------------------------------------------------------------------------
@@ -580,9 +567,7 @@ void Crp::parse_orders(const QJsonDocument &json)
         qDebug() << dom_order->get_task() << dom_order->get_price();
 
         //dom::Order order(jsonValue.toObject());
-
         //qDebug() << "order " << order.price() << order.amount() << order.value();
-
         //this->m_book_sell << order;
     }
 
@@ -715,20 +700,13 @@ void Crp::readyRead(QNetworkReply *reply) {
         this->parse_login(jsonResponse);
         this->balance();
 
-
-
-
-
-      //  m_state = "ready";
-     //   this->balance();
-
-      //  m_state = "ready";
-      //  this->panel();
-
-   //
-   //     connect(net, &Net::onReady, this, &Crp::readyRead);
-
-        //emit onOrders();
+        // m_state = "ready";
+        // this->balance();
+        // m_state = "ready";
+        // this->panel();
+        //
+        // connect(net, &Net::onReady, this, &Crp::readyRead);
+        // emit onOrders();
     }
     else if (m_state == "balance")
     {
