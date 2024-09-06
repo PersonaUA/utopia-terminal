@@ -11,7 +11,7 @@ Item {
     property string value
     property int fontSize
 
-    id: pkTextInput
+    //id: pkTextInput
     implicitHeight: input.font.pixelSize * 1.5
 
     Rectangle {
@@ -41,6 +41,10 @@ Item {
                 selectByMouse: true
                 layer.enabled: true
                 text: value
+
+                onEditingFinished: {
+                    value = text
+                }
 
 
                 Text {

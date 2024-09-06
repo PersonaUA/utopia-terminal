@@ -81,13 +81,13 @@ public:
 
 
 public slots:
-    void login();
+    void login(QString pk, QString pass);
+
     void balance();
     void panel();
     void history_trade();
 
     qreal spread();
-
 
     void load_orders();
 
@@ -97,7 +97,6 @@ public slots:
     void sell(qreal price, qreal amount);
 
     void change_bid(uint order_id, qreal price, qreal amount, QString task);
-
 
     void open_socket(QString auth_token);
 

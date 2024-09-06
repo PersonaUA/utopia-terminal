@@ -45,19 +45,34 @@ Menu {
                     //anchors.fill: parent
 
                 SignInItem {
+                    id: pk
                     placeholderText: "Public Key"
-                    value: "979F97573494F3FE3AC3F6690AA064402CE386CC6BE4873CC7DD2752B53F0C78"
+                    value: settings.pk
                     fontSize: 12
 
                 }
                 SignInItem {
+                    id: pass
                     placeholderText: "Password"
-                    value: "IOJiojojoie787"
+                    value: settings.pass
                     fontSize: 12
                 }
 
                 }
                 standardButtons: Dialog.Ok | Dialog.Cancel
+
+                onAccepted: {
+
+                    settings.pk = pk.value
+                    settings.pass = pass.value
+
+                    crp.login(settings.pk, settings.pass);
+                }
+
+                onRejected: {
+                    pk.value = settings.pk
+                    pass.value = settings.pass
+                }
             }
     }
 

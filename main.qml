@@ -3,6 +3,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import Qt.labs.settings
 
 import "qml"
 import "qml/order"
@@ -27,6 +28,13 @@ ApplicationWindow {
     title: "BTC / USDT"
 
     Material.background: "#364554"
+
+    Settings {
+        id: settings
+        property string pk
+        property string pass
+    }
+
 
     header: MainHeader {} // bar_height: Qt.platform.os === "android" ? 210 : 250 }
 

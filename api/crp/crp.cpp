@@ -1,8 +1,7 @@
 #include "crp.h"
 #include "qurlquery.h"
 //-----------------------------------------------------------------------------
-#define PK "979F97573494F3FE3AC3F6690AA064402CE386CC6BE4873CC7DD2752B53F0C78"
-#define PASS "HUIhnirefnj987ydgsyegi#$#"
+
 
 #define URL_CRP "https://crp.is:8182"
 
@@ -387,14 +386,14 @@ void Crp::change_bid(uint order_id, qreal price, qreal amount, QString task)
     net->postDataForm("https://crp.is:8182/market/cancel", postData);
 }
 //-----------------------------------------------------------------------------
-void Crp::login()
+void Crp::login(QString pk, QString pass)
 {
     QUrl url("https://crp.is:8182/user/login");
 
     QUrlQuery postData;
 
-    postData.addQueryItem("PublicKey", PK);
-    postData.addQueryItem("password", PASS);
+    postData.addQueryItem("PublicKey", pk);
+    postData.addQueryItem("password", pass);
 
     this->m_state = "login";
     net->postDataForm("https://crp.is:8182/user/login", postData);
