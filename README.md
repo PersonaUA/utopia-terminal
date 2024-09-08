@@ -1,10 +1,21 @@
 # utopia-terminal
-Utopia P2P Ecosystem trading terminal
+Utopia P2P Ecosystem trading terminal. User-friendly desktop terminal for spot trading on the stock exchange crp.is
 
-User-friendly desktop terminal for spot trading on the stock exchange crp.is
+**The advantages of this solution:**
+- An excellent basis for creating your own trading bot or terminal for the CRP.IS exchange.
+- An example application running on CRP.is API and Qt.
+- Possibility of build on any system, including Android and Web!
+- Based on this, you can create a full-fledged crypto service, and you can additionally connect work with multiple users if you refine this application.
 
 ![image](https://github.com/user-attachments/assets/96bcb9ed-b935-4f89-9cb4-0736c4a6574b)
 
+**All features:**
+- Working with user authorization.
+- Interaction with CRP.is API
+- The basis for creating trading algorithms.
+- Fully functional trading terminal.
+- Processing events from the exchange in real time.
+- Intuitive GUI.
 
 ![image](https://github.com/user-attachments/assets/1cd0d58d-e267-4308-8b04-726c84a6d3cf)
 
@@ -21,3 +32,17 @@ You can now run utopia-terminal.exe without QtCreator.
 You can also download one of the latest releases of this project.
 
 Good luck!
+
+---
+
+<a href="https://udocs.gitbook.io/utopia-api/">
+  <img align="center" width="200" src="https://github.com/Sagleft/ures/blob/master/udocs-btn.png?raw=true">
+</a>
+
+<a href="https://utopia.im/RUTECH">
+  <img align="center" width="200" src="https://github.com/Sagleft/ures/blob/master/rutopia_tech.png?raw=true">
+</a>
+
+<a href="https://crp.is">
+  <img align="center" width="200" src="https://github.com/Sagleft/ures/blob/master/crp_is.png?raw=true">
+</a>
