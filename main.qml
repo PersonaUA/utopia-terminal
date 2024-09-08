@@ -1,10 +1,7 @@
-// UTOPIA PROJECT
-
 import QtQuick
-//import QtCore
+import QtCore
 import QtQuick.Controls
 import QtQuick.Layouts
-//import Qt.labs.settings
 
 import "qml"
 import "qml/order"
@@ -30,12 +27,17 @@ ApplicationWindow {
 
     Material.background: "#364554"
 
-    // Settings {
-    //     id: settings
-    //     //location: "settings.ini"
-    //     property string pk
-    //     property string pass
-    // }
+    Settings {
+        id: settings
+        location: "settings.ini"
+        property string pk
+        property string pass
+
+        property alias x: main.x
+        property alias y: main.y
+        property alias width: main.width
+        property alias height: main.height
+    }
 
 
     header: MainHeader {} // bar_height: Qt.platform.os === "android" ? 210 : 250 }

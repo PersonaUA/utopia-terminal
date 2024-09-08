@@ -4,8 +4,6 @@
 #include <QJsonObject>
 #include <QUrlQuery>
 
-#define PK "979F97573494F3FE3AC3F6690AA064402CE386CC6BE4873CC7DD2752B53F0C78"
-#define PASS "HUIhnirefnj987ydgsyegi#$#"
 //-----------------------------------------------------------------------------
 Net::Net(QObject *parent) : QObject(parent)
 {
@@ -13,8 +11,6 @@ Net::Net(QObject *parent) : QObject(parent)
     m_CookieJar = new QNetworkCookieJar();
     m_cookie = new QNetworkCookie();
 
-
-    // подключаем сигнал о завершении получения данных к обработчику полученного ответа
     connect(manager, &QNetworkAccessManager::finished, this, &Net::onResult);
 }
 //-----------------------------------------------------------------------------
@@ -22,12 +18,7 @@ Net::Net(QObject *parent) : QObject(parent)
 void Net::setCookie(QString cname, QString cvalue)
 {
     m_cookie->setName(cname.toUtf8());
-    m_cookie->setValue(cvalue.toUtf8());
-
-    //m_cookie(cname.toUtf8(), cvalue.toUtf8());
-
-    //QList<QNetworkCookie> cookies;
-    //cookies.append(cookie);
+    m_cookie->setValue(cvalue.toUtf8());   
 
     qDebug() << "Cookie = " << cvalue;
 
@@ -36,9 +27,6 @@ void Net::setCookie(QString cname, QString cvalue)
 
     auto cj = manager->cookieJar();
     cj->insertCookie(*m_cookie);
-
-
-    //manager->setCookieJar(mCookieJar);
 }
 
 //-----------------------------------------------------------------------------
