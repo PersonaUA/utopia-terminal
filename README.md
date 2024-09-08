@@ -9,7 +9,7 @@ User-friendly desktop terminal for spot trading on the stock exchange crp.is
 ![image](https://github.com/user-attachments/assets/1cd0d58d-e267-4308-8b04-726c84a6d3cf)
 
 <b>Building a project from source code (Windows)</b>
-1. Install Qt from https://qt.io
+1. Install latest version Qt from https://qt.io
 2. Open this project in the Qt Creator editor.
 3. Switch to Release mode.
 4. Run the project to check if it works right.
