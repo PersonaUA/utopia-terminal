@@ -12,6 +12,10 @@ int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
+    app.setOrganizationName("Utopia");
+    app.setOrganizationDomain("u.is");
+    app.setApplicationName("Utopia Terminal");
+
     QQmlApplicationEngine engine;
 
     //const QUrl url(u"qrc:/Utopia/main.qml"_qs);
