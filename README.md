@@ -9,6 +9,13 @@ Utopia P2P Ecosystem trading terminal. User-friendly desktop terminal for spot t
 
 ![image](https://github.com/user-attachments/assets/96bcb9ed-b935-4f89-9cb4-0736c4a6574b)
 
+**All features:**
+- Working with user authorization.
+- Interaction with CRP.is API
+- The basis for creating trading algorithms.
+- Fully functional trading terminal.
+- Processing events from the exchange in real time.
+- Intuitive GUI.
 
 ![image](https://github.com/user-attachments/assets/1cd0d58d-e267-4308-8b04-726c84a6d3cf)
 
