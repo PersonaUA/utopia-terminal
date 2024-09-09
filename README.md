@@ -1,5 +1,5 @@
 # utopia-terminal
-Utopia P2P Ecosystem trading terminal. User-friendly desktop terminal for spot trading on the stock exchange crp.is
+Utopia P2P Ecosystem user-friendly desktop terminal for spot trading on the stock exchange crp.is
 
 **The advantages of this solution:**
 - An excellent basis for creating your own trading bot or terminal for the CRP.IS exchange.
