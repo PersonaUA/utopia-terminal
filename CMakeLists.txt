@@ -14,7 +14,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(QT_PATH C:/Qt6)
 set(OPENSSL_ROOT_DIR c:/Qt6/Tools/OpenSSL/Win_x64/include/openssl/)
 
-find_package(Qt6 6.7  COMPONENTS Core Quick Qml Xml Network NetworkAuth WebSockets REQUIRED)
+find_package(Qt6 6.7 REQUIRED COMPONENTS Core Quick Qml Xml Network NetworkAuth WebSockets QmlImportScanner)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
@@ -51,12 +51,15 @@ target_link_libraries(
     PRIVATE
     Qt6::Core
     Qt6::Quick
+    Qt6::QWindowsIntegrationPlugin
     Qt6::Qml
     Qt6::Xml
     Qt6::NetworkAuth
     Qt6::Network
     Qt6::WebSockets
 )
+
+qt_import_qml_plugins(utopia-terminal)
 
 install(TARGETS utopia-terminal
     BUNDLE DESTINATION .
