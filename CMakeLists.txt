@@ -59,6 +59,7 @@ target_link_libraries(
     Qt6::WebSockets
 )
 
+
 qt_import_qml_plugins(utopia-terminal)
 
 install(TARGETS utopia-terminal
